@@ -1,0 +1,734 @@
+/* ===================================
+   PUBLIC RELATIONS OFFICER PAGE
+   ================================== */
+
+/* Main Container */
+.pro-board {
+  width: 100%;
+  min-height: calc(100vh - 70px);
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(135deg, #eef4fa 0%, #e3ecf5 100%);
+}
+
+.pro-content-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 32px clamp(20px, 5vw, 60px);
+  gap: 16px;
+}
+
+/* ===================================
+   HEADER SECTION
+   ================================== */
+
+.pro-headline {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin-bottom: 2px;
+}
+
+.pro-headline-text {
+  flex: 1;
+  max-width: 680px;
+}
+
+.pro-eyebrow {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  background: linear-gradient(135deg, #ee6c4d, #f6906f) !important;
+  color: white !important;
+  padding: 6px 16px !important;
+  border-radius: 20px !important;
+  margin: 0 0 12px !important;
+  font-weight: 700;
+  display: inline-block;
+  box-shadow: 0 4px 12px rgba(238, 108, 77, 0.25);
+}
+
+.pro-title {
+  margin: 0 0 8px !important;
+  font-size: clamp(28px, 3vw, 38px) !important;
+  color: #1a2332;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.pro-subtitle {
+  margin: 0;
+  color: #4f5f73;
+  line-height: 1.6;
+  font-size: 15px;
+}
+
+/* ===================================
+   LAYOUT GRID
+   ================================== */
+
+.pro-layout {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 28px;
+  align-items: start;
+}
+
+.pro-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.pro-main {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* ===================================
+   CARD COMPONENTS
+   ================================== */
+
+.pro-filter-card,
+.pro-reports-card {
+  background: #ffffff;
+  border: 1px solid rgba(41, 65, 92, 0.08) !important;
+  border-radius: 20px !important;
+  box-shadow: 0 8px 32px rgba(26, 35, 50, 0.08) !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+
+.pro-reports-card:hover {
+  box-shadow: 0 12px 40px rgba(26, 35, 50, 0.12) !important;
+  transform: translateY(-2px);
+}
+
+.pro-filter-card:hover {
+  box-shadow: 0 12px 40px rgba(26, 35, 50, 0.12) !important;
+}
+
+.pro-filter-card .card-body,
+.pro-reports-card .card-body {
+  padding: 20px !important;
+}
+
+/* ===================================
+   FILTER SECTION
+   ================================== */
+
+.pro-filter-title {
+  font-size: 14px;
+  font-family:
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+  font-weight: 700;
+  margin: 0 0 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #5d6c82;
+  display: block;
+}
+
+.pro-filter-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.pro-filter-label {
+  color: #1f2a37;
+  font-size: 13px;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  margin: 0 0 8px;
+  display: block;
+}
+
+/* ===================================
+   DROPDOWN COMPONENTS
+   ================================== */
+
+.pro-custom-dropdown .dropdown-toggle {
+  background: #f8fbff !important;
+  border: 1px solid rgba(61, 90, 128, 0.2) !important;
+  border-radius: 12px !important;
+  color: #1f2a37 !important;
+  font-size: 14px;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  padding: 10px 14px !important;
+  width: 100%;
+  text-align: left !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.pro-custom-dropdown .dropdown-toggle > div {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  flex: 1;
+}
+
+.pro-custom-dropdown .dropdown-toggle > div > span {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.pro-custom-dropdown .dropdown-toggle::after {
+  margin-left: 8px !important;
+}
+
+.pro-custom-dropdown .dropdown-toggle:hover {
+  background: #ffffff !important;
+  border-color: rgba(61, 90, 128, 0.3) !important;
+}
+
+.pro-custom-dropdown .dropdown-toggle:focus,
+.pro-custom-dropdown .dropdown-toggle:active {
+  background: #ffffff !important;
+  border-color: #ee6c4d !important;
+  box-shadow: 0 0 0 3px rgba(238, 108, 77, 0.1) !important;
+}
+
+.pro-custom-dropdown .dropdown-menu {
+  background: #ffffff;
+  border: 1px solid rgba(41, 65, 92, 0.15);
+  border-radius: 12px;
+  padding: 8px;
+  width: 100% !important;
+  box-shadow: 0 8px 24px rgba(26, 35, 50, 0.15);
+  max-height: 280px;
+  overflow-y: auto;
+  margin-top: 4px !important;
+}
+
+.pro-custom-dropdown .dropdown-menu::-webkit-scrollbar {
+  width: 6px;
+}
+
+.pro-custom-dropdown .dropdown-menu::-webkit-scrollbar-track {
+  background: #f0f4f8;
+  border-radius: 10px;
+}
+
+.pro-custom-dropdown .dropdown-menu::-webkit-scrollbar-thumb {
+  background: #98c1d9;
+  border-radius: 10px;
+}
+
+.pro-custom-dropdown .dropdown-menu::-webkit-scrollbar-thumb:hover {
+  background: #87b5ce;
+}
+
+.pro-custom-dropdown .dropdown-item {
+  color: #1f2a37;
+  font-size: 14px;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  padding: 10px 12px;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  margin-bottom: 2px;
+  display: flex;
+  align-items: center;
+}
+
+.pro-custom-dropdown .dropdown-item > div {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.pro-custom-dropdown .dropdown-item > div > span {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  flex: 1;
+}
+
+.pro-custom-dropdown .dropdown-item > div > svg {
+  flex-shrink: 0;
+  min-width: 18px;
+}
+
+.pro-custom-dropdown .dropdown-item:hover {
+  background: linear-gradient(135deg, #f8fbff, #f0f7fc);
+  color: #1f2a37;
+}
+
+.pro-custom-dropdown .dropdown-item.active,
+.pro-custom-dropdown .dropdown-item:active {
+  background: linear-gradient(135deg, #ee6c4d, #f6906f) !important;
+  color: white !important;
+  font-weight: 600;
+}
+
+.pro-custom-dropdown .dropdown-item.active svg,
+.pro-custom-dropdown .dropdown-item:active svg {
+  color: white !important;
+  stroke: white !important;
+}
+
+/* ===================================
+   DATE PICKER
+   ================================== */
+
+.pro-date-input {
+  background: #f8fbff !important;
+  border: 1px solid rgba(61, 90, 128, 0.2) !important;
+  border-radius: 12px !important;
+  color: #1f2a37 !important;
+  font-size: 14px;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  padding: 10px 14px !important;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.pro-date-input:hover {
+  background: #ffffff !important;
+  border-color: rgba(61, 90, 128, 0.3) !important;
+}
+
+.pro-date-input:focus {
+  background: #ffffff !important;
+  border-color: #ee6c4d !important;
+  box-shadow: 0 0 0 3px rgba(238, 108, 77, 0.1) !important;
+  outline: none;
+}
+
+.pro-date-input::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  opacity: 0.6;
+  transition: all 0.2s ease;
+}
+
+.pro-date-input::-webkit-calendar-picker-indicator:hover {
+  opacity: 1;
+}
+
+/* ===================================
+   BUTTONS
+   ================================== */
+
+.pro-reset-filters-btn {
+  background: linear-gradient(135deg, #ee6c4d, #f6906f);
+  border-radius: 12px;
+  border: none;
+  color: white;
+  font-size: 14px;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 10px 16px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 12px rgba(238, 108, 77, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pro-reset-filters-btn:hover {
+  background: linear-gradient(135deg, #f6906f, #ee6c4d);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(238, 108, 77, 0.35);
+}
+
+.pro-reset-filters-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(238, 108, 77, 0.25);
+}
+
+/* Custom Date Picker Input */
+.pro-custom-date-picker-input {
+  background: #f8fbff !important;
+  border: 1px solid rgba(61, 90, 128, 0.2) !important;
+  border-radius: 12px !important;
+  color: #1f2a37 !important;
+  font-size: 14px !important;
+  font-family: "Inter", sans-serif !important;
+  font-weight: 400 !important;
+  padding: 10px 14px !important;
+  width: 100% !important;
+  transition: all 0.3s ease !important;
+}
+
+.pro-custom-date-picker-input:hover {
+  background: #ffffff !important;
+  border-color: rgba(61, 90, 128, 0.3) !important;
+}
+
+.pro-custom-date-picker-input:focus {
+  background: #ffffff !important;
+  border-color: #ee6c4d !important;
+  box-shadow: 0 0 0 3px rgba(238, 108, 77, 0.1) !important;
+  outline: none !important;
+}
+
+/* React DatePicker Calendar */
+.react-datepicker {
+  background: #ffffff !important;
+  border: 1px solid rgba(41, 65, 92, 0.15) !important;
+  border-radius: 16px !important;
+  font-family: "Inter", sans-serif !important;
+  box-shadow: 0 8px 24px rgba(26, 35, 50, 0.15) !important;
+}
+
+.react-datepicker__header {
+  background: linear-gradient(135deg, #f8fbff, #f0f7fc) !important;
+  border-bottom: 1px solid rgba(61, 90, 128, 0.1) !important;
+  border-radius: 16px 16px 0 0 !important;
+  padding-top: 12px !important;
+}
+
+.react-datepicker__current-month,
+.react-datepicker__day-name {
+  color: #1f2a37 !important;
+  font-weight: 600 !important;
+}
+
+.react-datepicker__day {
+  color: #1f2a37 !important;
+  border-radius: 8px !important;
+  transition: all 0.2s ease;
+}
+
+.react-datepicker__day:hover {
+  background: linear-gradient(135deg, #f8fbff, #f0f7fc) !important;
+  border-radius: 8px !important;
+}
+
+.react-datepicker__day--selected,
+.react-datepicker__day--keyboard-selected {
+  background: linear-gradient(135deg, #ee6c4d, #f6906f) !important;
+  color: white !important;
+  border-radius: 8px !important;
+  font-weight: 600;
+}
+
+.react-datepicker__day--today {
+  border: 2px solid #ee6c4d !important;
+  border-radius: 8px !important;
+  font-weight: 600;
+}
+
+.react-datepicker__navigation-icon::before {
+  border-color: #5d6c82 !important;
+}
+
+.react-datepicker__navigation:hover *::before {
+  border-color: #ee6c4d !important;
+}
+
+/* ===================================
+   REPORTS CARD
+   ================================== */
+
+.pro-reports-header {
+  margin-bottom: 16px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid #f0f4f8;
+}
+
+.pro-reports-title {
+  margin: 0 0 8px !important;
+  font-size: 22px !important;
+  color: #1a2332;
+  font-weight: 700;
+}
+
+.pro-reports-count {
+  margin: 0;
+  color: #5d6c82;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.pro-count-badge {
+  background: linear-gradient(135deg, #98c1d9, #8ab3cc) !important;
+  color: #1f2a37 !important;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 8px;
+  font-size: 13px;
+}
+
+/* Reports List */
+.pro-reports-list {
+  max-height: calc(100vh - 400px);
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-right: 8px;
+  padding-top: 4px;
+  width: 100%;
+}
+
+.pro-reports-list .stack {
+  width: 100%;
+}
+
+.pro-reports-list .report-card-clickable {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.pro-reports-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.pro-reports-list::-webkit-scrollbar-track {
+  background: #f0f4f8;
+  border-radius: 10px;
+}
+
+.pro-reports-list::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #98c1d9, #8ab3cc);
+  border-radius: 10px;
+}
+
+.pro-reports-list::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #87b5ce, #7ba8c0);
+}
+
+/* Empty State */
+.pro-empty-state {
+  border: 2px dashed rgba(61, 90, 128, 0.25);
+  border-radius: 16px;
+  padding: 48px 32px;
+  text-align: center;
+  color: #5d6c82;
+  background: linear-gradient(135deg, #f8fbff, #f0f7fc);
+}
+
+.pro-empty-icon {
+  font-size: 48px;
+  color: #98c1d9;
+  display: block;
+  margin-bottom: 16px;
+}
+
+.pro-empty-message {
+  font-size: 16px;
+  font-weight: 600;
+  color: #3d5a80;
+  margin: 0 0 8px;
+}
+
+.pro-empty-hint {
+  font-size: 14px;
+  color: #5d6c82;
+  margin: 0;
+}
+
+/* ===================================
+   RESPONSIVE DESIGN
+   ================================== */
+
+@media (max-width: 992px) {
+  .pro-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .pro-sidebar {
+    order: 1;
+  }
+
+  .pro-main {
+    order: 2;
+  }
+}
+
+@media (max-width: 768px) {
+  .pro-content-wrapper {
+    padding: 20px 12px;
+    gap: 20px;
+  }
+
+  .pro-title {
+    font-size: 22px !important;
+  }
+
+  .pro-subtitle {
+    font-size: 14px;
+  }
+
+  .pro-eyebrow {
+    font-size: 10px;
+    padding: 5px 14px !important;
+  }
+
+  .pro-filter-card .card-body,
+  .pro-reports-card .card-body {
+    padding: 14px !important;
+  }
+
+  .pro-filter-title {
+    font-size: 12px;
+    margin-bottom: 12px;
+  }
+
+  .pro-filter-label {
+    font-size: 12px;
+  }
+
+  .pro-custom-dropdown .dropdown-toggle,
+  .pro-custom-date-picker-input {
+    font-size: 13px !important;
+    padding: 8px 12px !important;
+  }
+
+  .pro-reset-filters-btn {
+    font-size: 13px;
+    padding: 10px 14px;
+  }
+
+  .pro-reports-title {
+    font-size: 18px !important;
+  }
+
+  .pro-reports-count {
+    font-size: 13px;
+  }
+
+  .pro-count-badge {
+    font-size: 12px;
+    padding: 3px 8px;
+  }
+
+  .pro-reports-list {
+    max-height: none;
+    padding-right: 4px;
+    overflow-x: hidden;
+  }
+
+  .pro-empty-state {
+    padding: 32px 24px;
+  }
+
+  .pro-empty-icon {
+    font-size: 40px;
+    margin-bottom: 12px;
+  }
+
+  .pro-empty-message {
+    font-size: 15px;
+  }
+
+  .pro-empty-hint {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .pro-content-wrapper {
+    padding: 16px 10px;
+    gap: 16px;
+  }
+
+  .pro-headline {
+    gap: 12px;
+    margin-bottom: 0;
+  }
+
+  .pro-title {
+    font-size: 20px !important;
+  }
+
+  .pro-subtitle {
+    font-size: 13px;
+  }
+
+  .pro-eyebrow {
+    font-size: 9px;
+    padding: 4px 12px !important;
+  }
+
+  .pro-filter-card .card-body,
+  .pro-reports-card .card-body {
+    padding: 12px !important;
+  }
+
+  .pro-filter-title {
+    font-size: 11px;
+    margin-bottom: 10px;
+  }
+
+  .pro-filter-label {
+    font-size: 11px;
+    margin-bottom: 6px;
+  }
+
+  .pro-custom-dropdown .dropdown-toggle,
+  .pro-custom-date-picker-input {
+    font-size: 12px !important;
+    padding: 8px 10px !important;
+  }
+
+  .pro-reset-filters-btn {
+    font-size: 12px;
+    padding: 8px 12px;
+  }
+
+  .pro-reports-title {
+    font-size: 16px !important;
+  }
+
+  .pro-reports-count {
+    font-size: 12px;
+  }
+
+  .pro-count-badge {
+    font-size: 11px;
+    padding: 2px 6px;
+  }
+
+  .pro-empty-state {
+    padding: 24px 16px;
+  }
+
+  .pro-empty-icon {
+    font-size: 36px;
+    margin-bottom: 10px;
+  }
+
+  .pro-empty-message {
+    font-size: 14px;
+  }
+
+  .pro-empty-hint {
+    font-size: 12px;
+  }
+
+  .pro-sidebar {
+    margin-bottom: 16px;
+  }
+
+  .pro-reports-list {
+    padding-right: 2px;
+    overflow-x: hidden;
+  }
+
+  .pro-reports-card .card-body {
+    overflow-x: hidden;
+  }
+}

@@ -1,0 +1,76 @@
+/* STATUS COLORS GLOBAL DEFINITION */
+
+/* Base transition for all status elements */
+.status-color-base {
+  transition: all 0.2s ease-in-out;
+}
+
+/* Assigned (Blu #3B82F6) */
+.status-assigned {
+  background-color: #eff6ff !important; /* Blue 50 */
+  border: 1px solid #bfdbfe !important; /* Blue 200 */
+  color: #3b82f6 !important; /* Blue 500 */
+}
+.status-assigned * {
+  color: #3b82f6 !important;
+}
+
+/* Delegated (Viola #8B5CF6) - NUOVO */
+.status-delegated {
+  background-color: #f5f3ff !important; /* Violet 50 */
+  border: 1px solid #ddd6fe !important; /* Violet 200 */
+  color: #8b5cf6 !important; /* Violet 500 */
+}
+.status-delegated * {
+  color: #8b5cf6 !important;
+}
+
+/* In Progress (Ambra #F59E0B) */
+.status-inprogress {
+  background-color: #fffbeb !important; /* Amber 50 */
+  border: 1px solid #fde68a !important; /* Amber 200 */
+  color: #f59e0b !important; /* Amber 500 */
+}
+.status-inprogress * {
+  color: #f59e0b !important;
+}
+
+/* Resolved (Verde #10B981) */
+.status-resolved {
+  background-color: #ecfdf5 !important; /* Emerald 50 */
+  border: 1px solid #a7f3d0 !important; /* Emerald 200 */
+  color: #10b981 !important; /* Emerald 500 */
+}
+.status-resolved * {
+  color: #10b981 !important;
+}
+
+/* Rejected (Rosso #EF4444) */
+.status-rejected {
+  background-color: #fef2f2 !important; /* Red 50 */
+  border: 1px solid #fecaca !important; /* Red 200 */
+  color: #ef4444 !important; /* Red 500 */
+}
+.status-rejected * {
+  color: #ef4444 !important;
+}
+
+/* Suspended (Arancio #F97316) */
+.status-suspended {
+  background-color: #fff7ed !important; /* Orange 50 */
+  border: 1px solid #fed7aa !important; /* Orange 200 */
+  color: #f97316 !important; /* Orange 500 */
+}
+.status-suspended * {
+  color: #f97316 !important;
+}
+
+/* Pending Approval (Grigio #64748B) */
+.status-pendingapproval {
+  background-color: #f8fafc !important; /* Slate 50 */
+  border: 1px solid #e2e8f0 !important; /* Slate 200 */
+  color: #64748b !important; /* Slate 500 */
+}
+.status-pendingapproval * {
+  color: #64748b !important;
+}

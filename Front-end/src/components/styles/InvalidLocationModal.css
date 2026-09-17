@@ -1,0 +1,15 @@
+.invalid-location-modal .modal-content {
+  background-color: #e1edf4;
+  font-family: "Inter", sans-serif;
+}
+
+.invalid-location-modal .modal-title {
+  font-weight: bold;
+  text-align: center;
+  width: 100%;
+}
+
+.invalid-location-modal .modal-body {
+  text-align: center;
+  font-size: 1.1rem;
+}

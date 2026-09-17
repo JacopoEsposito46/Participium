@@ -1,0 +1,61 @@
+.not-authorized-wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  padding-top: 3rem;
+  justify-content: center;
+  background-image: url("../../resources/background_map.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: "Inter", sans-serif;
+}
+
+.not-authorized-container {
+  background-color: #3d5a80;
+  padding: 3rem 2rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(50, 50, 80, 0.16);
+  min-width: 400px !important;
+  max-width: 500px !important;
+}
+
+.not-authorized-card {
+  background-color: transparent !important;
+  border: none !important;
+}
+
+.not-authorized-title {
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.75rem;
+  font-family: "Inter", sans-serif;
+}
+
+.not-authorized-text {
+  color: #eee !important;
+  font-size: 1.1rem;
+  font-family: "Inter", sans-serif;
+}
+
+.not-authorized-btn {
+  width: 100%;
+  background-color: #ee6c4d !important;
+  color: #fff !important;
+  font-weight: bold !important;
+  border: none !important;
+  padding: 12px 0;
+  border-radius: 8px;
+  font-size: 1.15rem;
+  font-family: "Inter", sans-serif;
+}
+
+.not-authorized-btn:hover {
+  background-color: #d55a36 !important;
+  color: white;
+}
+
+.not-authorized-btn:active {
+  background-color: #d55a36 !important;
+  color: white;
+}

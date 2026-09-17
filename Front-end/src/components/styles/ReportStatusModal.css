@@ -1,0 +1,27 @@
+/* Common styles for both success and error modals */
+.report-status-modal .modal-content {
+  background-color: #e1edf4;
+  font-family: "Inter", sans-serif;
+}
+
+.report-status-modal .modal-title {
+  font-weight: bold;
+  text-align: center;
+  width: 100%;
+}
+
+.report-status-modal .modal-body {
+  text-align: center;
+  font-size: 1.1rem;
+  padding: 1.5rem;
+}
+
+/* Success modal icon color */
+.report-status-modal.success .modal-title {
+  color: #3d5a80;
+}
+
+/* Error modal icon color */
+.report-status-modal.error .modal-title {
+  color: #721c24;
+}

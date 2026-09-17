@@ -1,0 +1,349 @@
+/* ===================================
+   MAINTAINER PAGE
+   ================================== */
+
+/* Main Container */
+.maintainer-board {
+  width: 100%;
+  min-height: calc(100vh - 70px);
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(135deg, #eef4fa 0%, #e3ecf5 100%);
+  font-family:
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+}
+
+.maintainer-content-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 32px clamp(20px, 5vw, 60px);
+  gap: 16px;
+}
+
+/* ===================================
+   HEADER SECTION
+   ================================== */
+
+.maintainer-headline {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin-bottom: 2px;
+}
+
+.maintainer-headline-text {
+  flex: 1;
+  max-width: 680px;
+}
+
+.maintainer-eyebrow {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  background: linear-gradient(135deg, #ee6c4d, #f6906f) !important;
+  color: white !important;
+  padding: 6px 16px !important;
+  border-radius: 20px !important;
+  margin: 0 0 12px !important;
+  font-weight: 700;
+  display: inline-block;
+  box-shadow: 0 4px 12px rgba(238, 108, 77, 0.25);
+}
+
+.maintainer-title {
+  margin: 0 0 8px !important;
+  font-size: clamp(28px, 3vw, 38px) !important;
+  color: #1a2332;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.maintainer-subtitle {
+  margin: 0;
+  color: #4f5f73;
+  line-height: 1.6;
+  font-size: 15px;
+}
+
+/* ===================================
+   LAYOUT GRID
+   ================================== */
+
+.maintainer-layout {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 28px;
+  align-items: start;
+}
+
+.maintainer-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.maintainer-main {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* ===================================
+   CARD COMPONENTS
+   ================================== */
+
+.maintainer-filter-card,
+.maintainer-reports-card {
+  background: #ffffff;
+  border: 1px solid rgba(41, 65, 92, 0.08) !important;
+  border-radius: 20px !important;
+  box-shadow: 0 8px 32px rgba(26, 35, 50, 0.08) !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+
+.maintainer-reports-card:hover {
+  box-shadow: 0 12px 40px rgba(26, 35, 50, 0.12) !important;
+  transform: translateY(-2px);
+}
+
+.maintainer-filter-card:hover {
+  box-shadow: 0 12px 40px rgba(26, 35, 50, 0.12) !important;
+}
+
+.maintainer-filter-card .card-body,
+.maintainer-reports-card .card-body {
+  padding: 20px !important;
+}
+
+/* ===================================
+   FILTER SECTION
+   ================================== */
+
+.maintainer-filter-title {
+  font-size: 14px;
+  font-family:
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+  font-weight: 700;
+  margin: 0 0 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #5d6c82;
+  display: block;
+}
+
+.maintainer-filter-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.maintainer-filter-label {
+  color: #1f2a37;
+  font-size: 13px;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  margin: 0 0 8px;
+  display: block;
+}
+
+/* Dropdown Styles */
+.maintainer-custom-dropdown .dropdown-toggle {
+  background: #f8fbff !important;
+  border: 1px solid rgba(61, 90, 128, 0.2) !important;
+  border-radius: 12px !important;
+  color: #1f2a37 !important;
+  font-size: 14px;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  padding: 10px 14px !important;
+  width: 100%;
+  text-align: left !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  transition: all 0.3s ease;
+}
+
+.maintainer-custom-dropdown .dropdown-toggle:hover {
+  background: #ffffff !important;
+  border-color: rgba(61, 90, 128, 0.3) !important;
+}
+
+.maintainer-custom-dropdown .dropdown-toggle:focus,
+.maintainer-custom-dropdown .dropdown-toggle:active,
+.maintainer-custom-dropdown .dropdown-toggle.show {
+  background: #ffffff !important;
+  border-color: #ee6c4d !important;
+  box-shadow: 0 0 0 3px rgba(238, 108, 77, 0.1) !important;
+}
+
+.maintainer-custom-dropdown .dropdown-menu {
+  background: #ffffff;
+  border: 1px solid rgba(41, 65, 92, 0.15);
+  border-radius: 12px;
+  padding: 8px;
+  width: 100% !important;
+  box-shadow: 0 8px 24px rgba(26, 35, 50, 0.15);
+  max-height: 280px;
+  overflow-y: auto;
+  margin-top: 4px !important;
+}
+
+.maintainer-custom-dropdown .dropdown-item {
+  color: #1f2a37;
+  font-size: 14px;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  padding: 10px 12px;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  margin-bottom: 2px;
+}
+
+.maintainer-custom-dropdown .dropdown-item:hover {
+  background: linear-gradient(135deg, #f8fbff, #f0f7fc);
+  color: #1f2a37;
+}
+
+.maintainer-custom-dropdown .dropdown-item.active {
+  background: linear-gradient(135deg, #ee6c4d, #f6906f);
+  color: #ffffff !important;
+  font-weight: 600;
+}
+
+/* Date Picker */
+.maintainer-date-picker-input {
+  background: #f8fbff !important;
+  border: 1px solid rgba(61, 90, 128, 0.2) !important;
+  border-radius: 12px !important;
+  color: #1f2a37 !important;
+  font-size: 14px !important;
+  font-family: "Inter", sans-serif !important;
+  font-weight: 400 !important;
+  padding: 10px 14px !important;
+  width: 100% !important;
+}
+
+/* Reset Button */
+.maintainer-reset-btn {
+  background: linear-gradient(135deg, #ee6c4d, #f6906f);
+  border-radius: 12px;
+  border: none;
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 10px 16px;
+  width: 100%;
+  margin-top: 12px;
+  transition: all 0.2s;
+  box-shadow: 0 4px 12px rgba(238, 108, 77, 0.25);
+}
+
+.maintainer-reset-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(238, 108, 77, 0.35);
+}
+
+/* ===================================
+   REPORTS LIST
+   ================================== */
+
+.maintainer-reports-header {
+  margin-bottom: 16px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid #f0f4f8;
+}
+
+.maintainer-reports-title {
+  margin: 0 0 8px !important;
+  font-size: 22px !important;
+  color: #1a2332;
+  font-weight: 700;
+}
+
+.maintainer-reports-count {
+  margin: 0;
+  color: #5d6c82;
+  font-size: 14px;
+}
+
+.maintainer-count-badge {
+  background: linear-gradient(135deg, #98c1d9, #8ab3cc) !important;
+  color: #1f2a37 !important;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 8px;
+  font-size: 13px;
+}
+
+.maintainer-reports-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.maintainer-reports-list .stack {
+  width: 100%;
+}
+
+.maintainer-reports-list .report-card-clickable {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.maintainer-empty-state {
+  border: 2px dashed rgba(61, 90, 128, 0.25);
+  border-radius: 16px;
+  padding: 48px 32px;
+  text-align: center;
+  color: #5d6c82;
+  background: linear-gradient(135deg, #f8fbff, #f0f7fc);
+}
+
+.maintainer-empty-icon {
+  font-size: 48px;
+  color: #98c1d9;
+  display: block;
+  margin-bottom: 16px;
+}
+
+.maintainer-empty-message {
+  font-size: 16px;
+  font-weight: 600;
+  color: #3d5a80;
+  margin: 0 0 8px;
+}
+
+/* ===================================
+   RESPONSIVE
+   ================================== */
+
+@media (max-width: 992px) {
+  .maintainer-layout {
+    grid-template-columns: 1fr;
+  }
+  .maintainer-sidebar {
+    order: 1;
+  }
+  .maintainer-main {
+    order: 2;
+  }
+}
+
+@media (max-width: 768px) {
+  .maintainer-content-wrapper {
+    padding: 20px 16px;
+  }
+}

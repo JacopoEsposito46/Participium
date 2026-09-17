@@ -1,0 +1,91 @@
+.login-required-modal .modal-content {
+  background-color: #e1edf4;
+  font-family: "Inter", sans-serif;
+  border-radius: 12px;
+  border: none;
+}
+
+.login-required-modal .modal-header {
+  border-bottom: 1px solid rgba(61, 90, 128, 0.15);
+  padding: 1.5rem;
+}
+
+.login-required-modal .modal-title {
+  font-weight: 700;
+  text-align: center;
+  width: 100%;
+  color: #3d5a80;
+  font-size: 1.5rem;
+}
+
+.login-required-modal .modal-body {
+  text-align: center;
+  font-size: 1.05rem;
+  padding: 2rem 1.5rem;
+  color: #2c3e50;
+  line-height: 1.6;
+}
+
+.login-required-modal .modal-footer {
+  border-top: 1px solid rgba(61, 90, 128, 0.15);
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+.login-required-btn {
+  padding: 10px 28px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  border: none;
+  transition: all 0.3s ease;
+  font-family: "Inter", sans-serif;
+  cursor: pointer;
+  min-width: 100px;
+}
+
+.login-required-btn.primary {
+  background-color: #ee6c4d;
+  color: white;
+}
+
+.login-required-btn.primary:hover {
+  background-color: #d55a36;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(238, 108, 77, 0.3);
+}
+
+.login-required-btn.primary:active {
+  transform: translateY(0);
+}
+
+.login-required-btn.secondary {
+  background-color: transparent;
+  color: #3d5a80;
+  border: 2px solid #3d5a80;
+}
+
+.login-required-btn.secondary:hover {
+  background-color: #3d5a80;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(61, 90, 128, 0.2);
+}
+
+.login-required-btn.secondary:active {
+  transform: translateY(0);
+}
+
+/* Mobile responsive */
+@media (max-width: 576px) {
+  .login-required-modal .modal-footer {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .login-required-btn {
+    width: 100%;
+  }
+}

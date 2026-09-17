@@ -1,0 +1,134 @@
+.email-verification-modal .modal-content {
+  background-color: #e1edf4;
+  font-family: "Inter", sans-serif;
+  border: 3px solid #3d5a80;
+}
+
+.email-verification-modal .modal-dialog {
+  max-width: 450px;
+  width: 90vw;
+  margin: 0 auto;
+}
+
+.email-verification-modal .modal-title {
+  font-weight: bold;
+  text-align: center;
+  width: 100%;
+  color: #3d5a80;
+}
+
+.email-verification-modal .modal-body {
+  padding: 1.5rem 2rem;
+}
+
+.email-verification-modal .verification-instructions {
+  text-align: center;
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+
+.email-verification-modal .email-display {
+  text-align: center;
+  font-size: 1rem;
+  color: #3d5a80;
+  margin-bottom: 1.5rem;
+  word-break: break-word;
+}
+
+.email-verification-modal .code-input {
+  text-align: center;
+  font-size: 1.5rem;
+  letter-spacing: 0.5rem;
+  font-weight: bold;
+  padding: 0.75rem;
+}
+
+.email-verification-modal .code-input::placeholder {
+  font-size: 0.9rem;
+  letter-spacing: normal;
+  font-weight: normal;
+}
+
+.email-verification-modal .button-group {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.email-verification-modal .verify-btn {
+  background-color: #ee6c4d;
+  border: none;
+  color: white;
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  min-width: 150px;
+}
+
+.email-verification-modal .verify-btn:hover:not(:disabled) {
+  background-color: #d55a36;
+  color: white;
+}
+
+.email-verification-modal .verify-btn:active:not(:disabled) {
+  background-color: #d55a36 !important;
+  color: white;
+}
+
+.email-verification-modal .verify-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.email-verification-modal .resend-section {
+  text-align: center;
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid #ddd;
+}
+
+.email-verification-modal .resend-text {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 0.25rem;
+}
+
+.email-verification-modal .resend-btn {
+  color: #3d5a80;
+  font-weight: 600;
+  text-decoration: underline;
+  padding: 0;
+}
+
+.email-verification-modal .resend-btn:hover:not(:disabled) {
+  color: #2c4a6e;
+}
+
+.email-verification-modal .resend-btn:disabled {
+  color: #999;
+}
+
+.email-verification-modal .resend-info {
+  font-size: 0.8rem;
+  color: #888;
+  margin-top: 0.5rem;
+  font-style: italic;
+}
+
+.email-verification-modal .alert {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.email-verification-modal .alert-success {
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+  color: #155724;
+}
+
+.email-verification-modal .alert-danger {
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+  color: #721c24;
+}

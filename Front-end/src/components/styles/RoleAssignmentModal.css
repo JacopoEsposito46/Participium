@@ -1,0 +1,277 @@
+/* Custom Backdrop for React Bootstrap Modal */
+.role-modal-backdrop {
+  background-color: rgba(26, 35, 50, 0.75) !important;
+  backdrop-filter: blur(4px);
+  opacity: 1 !important;
+  /* Remove layout properties as Bootstrap handles them */
+}
+
+/* Dialog wrapper for width control */
+.role-modal-dialog {
+  max-width: 480px;
+  width: 90%;
+  margin: auto;
+}
+
+/* Modal Content styling */
+.role-modal-content {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 28px;
+  /* width attributes moved to dialog */
+  max-height: 75vh;
+  position: relative;
+  box-shadow: 0 12px 48px rgba(26, 35, 50, 0.15);
+  border: 1px solid rgba(41, 65, 92, 0.08);
+  overflow: hidden;
+  /* Assumes content needs to clip */
+  display: flex;
+  /* flex-col is default for modal-content usually but good to enforce if children rely on it */
+  flex-direction: column;
+}
+
+.role-modal-close {
+  position: absolute;
+  top: 20px;
+  right: 24px;
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: #5d6c82;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  border-radius: 50%;
+}
+
+.role-modal-close:hover {
+  color: #ee6c4d;
+  background: #f0f4f8;
+}
+
+.role-modal-title {
+  color: #1a2332;
+  font-size: 24px;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  margin-bottom: 8px;
+  text-align: center;
+  padding-right: 40px;
+}
+
+.role-modal-subtitle {
+  color: #5d6c82;
+  font-size: 15px;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  margin-bottom: 24px;
+  text-align: center;
+  padding-bottom: 16px;
+  border-bottom: 2px solid #f0f4f8;
+}
+
+/* Opzioni dei ruoli */
+.role-options {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-right: 8px;
+}
+
+.role-options::-webkit-scrollbar {
+  width: 6px;
+}
+
+.role-options::-webkit-scrollbar-track {
+  background: #f0f4f8;
+  border-radius: 10px;
+}
+
+.role-options::-webkit-scrollbar-thumb {
+  background: #98c1d9;
+  border-radius: 10px;
+}
+
+.role-options::-webkit-scrollbar-thumb:hover {
+  background: #87b5ce;
+}
+
+.role-option {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  border-radius: 12px;
+  border: 1px solid rgba(39, 60, 90, 0.12);
+  background: linear-gradient(135deg, #f8fbff, #f0f7fc);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.role-option:hover {
+  background: linear-gradient(135deg, #eef6fc, #e5f1f9);
+  border-color: rgba(39, 60, 90, 0.2);
+  transform: translateX(4px);
+}
+
+.role-option-highlighted {
+  background: linear-gradient(135deg, #fff5e6, #ffe4c4) !important;
+  border-color: rgba(238, 108, 77, 0.3) !important;
+  box-shadow: 0 2px 12px rgba(238, 108, 77, 0.15);
+}
+
+.role-option-highlighted:hover {
+  background: linear-gradient(135deg, #ffedd5, #ffd9ab) !important;
+  border-color: rgba(238, 108, 77, 0.4) !important;
+  transform: translateX(4px);
+}
+
+.role-icon {
+  background: white;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.role-name {
+  color: #1f2a37;
+  font-size: 15px;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  flex: 1;
+}
+
+/* New styles for UserDetailsModal consistency */
+.userdetails-icon {
+  background: linear-gradient(135deg, #e6eff7, #dce8f4);
+  border-radius: 12px;
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.userdetails-role-pill {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  padding: 5px 12px;
+  border-radius: 12px;
+  background: linear-gradient(
+    135deg,
+    rgba(61, 90, 128, 0.12),
+    rgba(61, 90, 128, 0.08)
+  );
+  color: #284366;
+  white-space: normal;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  display: inline-flex; /* Changed from inline-block to inline-flex for alignment */
+  align-items: center;
+  width: fit-content;
+  max-width: 100%;
+  align-self: flex-start;
+  line-height: 1.3;
+}
+
+/* Custom styled buttons for role modal */
+.role-modal-btn {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 12px 24px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 44px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.role-modal-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+.role-modal-btn-primary {
+  background: linear-gradient(135deg, #ee6c4d, #f6906f);
+  color: white;
+  box-shadow: 0 4px 12px rgba(238, 108, 77, 0.25);
+}
+
+.role-modal-btn-primary:hover:not(:disabled) {
+  background: linear-gradient(135deg, #f6906f, #ee6c4d);
+  box-shadow: 0 6px 16px rgba(238, 108, 77, 0.35);
+  transform: translateY(-2px);
+}
+
+.role-modal-btn-primary:active:not(:disabled) {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(238, 108, 77, 0.3);
+}
+
+.role-modal-btn-secondary {
+  background: linear-gradient(135deg, #f8fbff, #f0f7fc);
+  color: #5d6c82;
+  border: 1px solid rgba(93, 108, 130, 0.2);
+  box-shadow: 0 2px 8px rgba(93, 108, 130, 0.08);
+}
+
+.role-modal-btn-secondary:hover:not(:disabled) {
+  background: linear-gradient(135deg, #eef6fc, #e5f1f9);
+  color: #4a5568;
+  border-color: rgba(93, 108, 130, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(93, 108, 130, 0.12);
+}
+
+.role-modal-btn-secondary:active:not(:disabled) {
+  transform: translateY(0);
+  background: linear-gradient(135deg, #e5f1f9, #dce8f4);
+}
+
+.role-modal-btn-danger {
+  background: linear-gradient(135deg, #dc3545, #c82333);
+  color: white;
+  box-shadow: 0 4px 12px rgba(220, 53, 69, 0.25);
+}
+
+.role-modal-btn-danger:hover:not(:disabled) {
+  background: linear-gradient(135deg, #c82333, #bd2130);
+  box-shadow: 0 6px 16px rgba(220, 53, 69, 0.35);
+  transform: translateY(-2px);
+}
+
+.role-modal-btn-danger:active:not(:disabled) {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(220, 53, 69, 0.3);
+}

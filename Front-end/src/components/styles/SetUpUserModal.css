@@ -1,0 +1,150 @@
+/* Overlay per il modal - Removed as Bootstrap handles backdrop */
+
+/* Contenuto del modal */
+.setup-user-modal-content {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 28px;
+  position: relative;
+  box-shadow: 0 12px 48px rgba(26, 35, 50, 0.15);
+  border: 1px solid rgba(41, 65, 92, 0.08);
+  box-sizing: border-box;
+}
+
+/* Pulsante chiusura */
+.setup-user-modal-close {
+  position: absolute;
+  top: 20px;
+  right: 24px;
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: #5d6c82;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  border-radius: 50%;
+}
+
+.setup-user-modal-close:hover {
+  color: #ee6c4d;
+  background: #f0f4f8;
+}
+
+/* Titolo del modal */
+.set-up-user-title {
+  color: #1a2332;
+  font-size: 24px;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-align: center;
+  padding-right: 40px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid #f0f4f8;
+}
+
+/* Container del form dentro il modal */
+.setup-user-container {
+  background: linear-gradient(135deg, #f8fbff, #f0f7fc);
+  padding: 24px;
+  border-radius: 16px;
+  border: 1px solid rgba(39, 60, 90, 0.12);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  width: 100% !important;
+  max-width: 700px !important;
+  box-sizing: border-box;
+}
+
+/* Form per creazione utente */
+.setup-user-form {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-size: 1rem;
+}
+
+/* Label dentro il form */
+.setup-user-form .form-label {
+  color: #1f2a37;
+  font-weight: 600;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+/* Campi di input */
+.setup-user-form .form-control {
+  border-radius: 10px;
+  font-family: "Inter", sans-serif;
+  border: 1px solid rgba(61, 90, 128, 0.2);
+  background: #ffffff;
+  padding: 10px 14px;
+  font-size: 15px;
+  transition: all 0.2s ease;
+}
+
+.setup-user-form .form-control:focus {
+  border-color: #98c1d9;
+  box-shadow: 0 0 0 3px rgba(152, 193, 217, 0.15);
+  background: #ffffff;
+}
+
+.setup-user-form .form-control::placeholder {
+  color: rgba(31, 42, 55, 0.4);
+}
+
+/* Spaziatura gruppi form */
+.setup-user-form .form-group {
+  margin-bottom: 1rem;
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
+
+/* Pulsante crea utente */
+.setup-user-btn {
+  width: 100%;
+  background: linear-gradient(135deg, #ee6c4d, #f6906f) !important;
+  color: #fff !important;
+  font-weight: 600 !important;
+  border: none !important;
+  padding: 12px 0;
+  border-radius: 10px;
+  font-size: 15px;
+  margin-top: 8px;
+  font-family: "Inter", sans-serif;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(61, 90, 128, 0.25);
+  letter-spacing: 0.02em;
+}
+
+.setup-user-btn:hover:not(:disabled) {
+  background: linear-gradient(135deg, #ee6c4d, #f6906f) !important;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(61, 90, 128, 0.3);
+}
+
+.setup-user-btn:active:not(:disabled) {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(61, 90, 128, 0.25);
+}
+
+.setup-user-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Loading indicator */
+.loading-indicator {
+  text-align: center;
+  color: #5d6c82;
+  font-weight: 600;
+  margin-bottom: 16px;
+  padding: 12px;
+  background: #f0f4f8;
+  border-radius: 10px;
+}

@@ -1,0 +1,542 @@
+/* ===================================
+   ADMIN PAGE 
+   ================================== */
+
+/* Main Container */
+.admin-board {
+  width: 100%;
+  min-height: calc(100vh - 70px);
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(135deg, #eef4fa 0%, #e3ecf5 100%);
+}
+
+.admin-content-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 32px clamp(20px, 5vw, 60px);
+  gap: 16px;
+}
+
+/* ===================================
+   HEADER SECTION
+   ================================== */
+
+.admin-headline {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin-bottom: 2px;
+}
+
+.admin-headline-text {
+  flex: 1;
+  max-width: 680px;
+}
+
+.admin-eyebrow {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  background: linear-gradient(135deg, #ee6c4d, #f6906f) !important;
+  color: white !important;
+  padding: 6px 16px !important;
+  border-radius: 20px !important;
+  margin: 0 0 12px !important;
+  font-weight: 700;
+  display: inline-block;
+  box-shadow: 0 4px 12px rgba(238, 108, 77, 0.25);
+}
+
+.admin-title {
+  margin: 0 0 8px !important;
+  font-size: clamp(28px, 3vw, 38px) !important;
+  color: #1a2332;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.admin-subtitle {
+  margin: 0;
+  color: #4f5f73;
+  line-height: 1.6;
+  font-size: 15px;
+}
+
+/* ===================================
+   LAYOUT GRID
+   ================================== */
+
+.admin-layout {
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  gap: 28px;
+  align-items: stretch;
+}
+
+.admin-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-height: calc(100vh - 280px);
+}
+
+.admin-main {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* ===================================
+   CARD COMPONENTS
+   ================================== */
+
+.filter-card,
+.legend-card,
+.admin-users-card {
+  background: #ffffff;
+  border: 1px solid rgba(41, 65, 92, 0.08) !important;
+  border-radius: 20px !important;
+  box-shadow: 0 8px 32px rgba(26, 35, 50, 0.08) !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  z-index: 1;
+}
+
+/* Only legend and users card have hover transform - not filter cards to avoid dropdown bugs */
+.legend-card:hover,
+.admin-users-card:hover {
+  box-shadow: 0 12px 40px rgba(26, 35, 50, 0.12) !important;
+  transform: translateY(-2px);
+}
+
+/* Filter cards get enhanced shadow on hover but no transform */
+.filter-card:hover {
+  box-shadow: 0 12px 40px rgba(26, 35, 50, 0.12) !important;
+}
+
+/* When dropdown is open, ensure proper z-index */
+.filter-card:has(.dropdown.show) {
+  z-index: 1000;
+}
+
+.filter-card .card-body,
+.legend-card .card-body,
+.admin-users-card .card-body {
+  padding: 20px !important;
+}
+
+/* ===================================
+   FILTER SECTION
+   ================================== */
+
+.filter-title {
+  font-size: 14px;
+  font-family:
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+  font-weight: 700;
+  margin: 0 0 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #5d6c82;
+}
+
+/* Search Input Group */
+.search-input-group {
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.search-input-group:focus-within {
+  box-shadow: 0 4px 16px rgba(238, 108, 77, 0.15);
+}
+
+.search-icon {
+  background: linear-gradient(135deg, #98c1d9, #8ab3cc) !important;
+  border: none !important;
+  color: #1f2a37;
+  font-size: 16px;
+  padding: 0 16px;
+  border-radius: 14px 0 0 14px !important;
+}
+
+.search-email-input {
+  background: #f8fbff !important;
+  border: none !important;
+  border-left: 1px solid rgba(61, 90, 128, 0.15) !important;
+  color: #1f2a37 !important;
+  font-size: 15px;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  padding: 12px 16px !important;
+  height: auto !important;
+  transition: all 0.3s ease;
+}
+
+.search-email-input::placeholder {
+  color: rgba(31, 42, 55, 0.45);
+  font-size: 14px;
+}
+
+.search-email-input:hover {
+  background: #ffffff !important;
+}
+
+.search-email-input:focus {
+  background: #ffffff !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* ===================================
+   LEGEND SECTION
+   ================================== */
+
+.legend-card {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+}
+
+.legend-card .card-body {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  flex: 1;
+}
+
+.legend-card-title {
+  font-size: 14px;
+  color: #5d6c82;
+  margin: 0 0 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  flex-shrink: 0;
+}
+
+.legend-chips {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-right: 4px;
+  flex: 1;
+  min-height: 0;
+}
+
+.legend-chips::-webkit-scrollbar {
+  width: 6px;
+}
+
+.legend-chips::-webkit-scrollbar-track {
+  background: #f0f4f8;
+  border-radius: 10px;
+}
+
+.legend-chips::-webkit-scrollbar-thumb {
+  background: #98c1d9;
+  border-radius: 10px;
+}
+
+.legend-chip {
+  display: flex !important;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px !important;
+  border-radius: 12px !important;
+  border: 1px solid rgba(39, 60, 90, 0.12) !important;
+  font-size: 14px !important;
+  color: #1f2a37 !important;
+  background: linear-gradient(135deg, #f8fbff, #f0f7fc) !important;
+  font-weight: 500 !important;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.legend-chip:hover {
+  background: linear-gradient(135deg, #eef6fc, #e5f1f9) !important;
+  border-color: rgba(39, 60, 90, 0.2) !important;
+  transform: translateX(4px);
+}
+
+.legend-chip-active {
+  background: linear-gradient(135deg, #ee6c4d, #f6906f) !important;
+  border-color: #ee6c4d !important;
+  color: white !important;
+  font-weight: 600 !important;
+  box-shadow: 0 4px 12px rgba(238, 108, 77, 0.3);
+}
+
+.legend-chip-active svg {
+  color: #1f2a37 !important;
+}
+
+.legend-chip-active:hover {
+  background: linear-gradient(135deg, #f6906f, #ee6c4d) !important;
+  border-color: #f6906f !important;
+}
+
+.legend-chip-active .legend-chip-text {
+  color: white !important;
+}
+
+.legend-chip-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  flex-shrink: 0;
+}
+
+.legend-chip-text {
+  flex: 1;
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ===================================
+   BUTTONS
+   ================================== */
+
+.add-user-btn {
+  min-width: 140px;
+  padding: 0 24px !important;
+  height: 44px !important;
+  background: linear-gradient(135deg, #ee6c4d, #f6906f) !important;
+  border-radius: 14px !important;
+  border: none !important;
+  color: white !important;
+  font-size: 20px !important;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(238, 108, 77, 0.3);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.add-user-btn:hover {
+  background: linear-gradient(135deg, #f6906f, #ee6c4d) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(238, 108, 77, 0.4);
+}
+
+.add-user-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 12px rgba(238, 108, 77, 0.3);
+}
+
+.add-user-btn.mobile-only {
+  display: none;
+}
+
+.add-user-btn.desktop-only {
+  display: inline-flex;
+}
+
+/* ===================================
+   USERS CARD
+   ================================== */
+
+.admin-users-card {
+  max-height: calc(100vh - 280px);
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-users-card .card-body {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.admin-users-header {
+  margin-bottom: 16px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid #f0f4f8;
+  flex-shrink: 0;
+}
+
+.users-title {
+  margin: 0 0 8px !important;
+  font-size: 20px !important;
+  color: #1a2332;
+  font-weight: 700;
+}
+
+.users-count {
+  margin: 0;
+  color: #5d6c82;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.count-badge {
+  background: linear-gradient(135deg, #98c1d9, #8ab3cc) !important;
+  color: #1f2a37 !important;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 8px;
+  font-size: 13px;
+}
+
+/* Empty State */
+.admin-empty-state {
+  border: 2px dashed rgba(61, 90, 128, 0.25);
+  border-radius: 16px;
+  padding: 48px 32px;
+  text-align: center;
+  color: #5d6c82;
+  background: linear-gradient(135deg, #f8fbff, #f0f7fc);
+}
+
+.empty-icon {
+  font-size: 48px;
+  color: #98c1d9;
+  display: block;
+  margin-bottom: 16px;
+}
+
+.empty-message {
+  font-size: 16px;
+  font-weight: 600;
+  color: #3d5a80;
+  margin: 0 0 8px;
+}
+
+.empty-hint {
+  font-size: 14px;
+  color: #5d6c82;
+  margin: 0;
+}
+
+/* User List Grid */
+.user-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 16px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-right: 8px;
+  flex: 1;
+  min-height: 0;
+}
+
+.user-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.user-list::-webkit-scrollbar-track {
+  background: #f0f4f8;
+  border-radius: 10px;
+}
+
+.user-list::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #98c1d9, #8ab3cc);
+  border-radius: 10px;
+}
+
+.user-list::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #87b5ce, #7ba8c0);
+}
+
+/* ===================================
+   RESPONSIVE DESIGN
+   ================================== */
+
+@media (max-width: 992px) {
+  .admin-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-sidebar {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .add-user-btn.mobile-only {
+    order: 1;
+  }
+
+  .filter-card {
+    order: 2;
+  }
+
+  .legend-card {
+    order: 3;
+  }
+
+  .admin-main {
+    order: 4;
+  }
+}
+
+@media (max-width: 768px) {
+  .admin-content-wrapper {
+    padding: 24px 16px;
+    gap: 24px;
+  }
+
+  .add-user-btn.desktop-only {
+    display: none;
+  }
+
+  .add-user-btn.mobile-only {
+    display: inline-flex;
+  }
+
+  .user-list {
+    grid-template-columns: 1fr;
+    max-height: none;
+  }
+
+  .admin-title {
+    font-size: 24px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .admin-headline {
+    gap: 16px;
+  }
+
+  .filter-title,
+  .legend-card-title {
+    font-size: 12px;
+  }
+
+  .custom-dropdown-toggle {
+    font-size: 14px !important;
+  }
+
+  .search-email-input {
+    font-size: 14px;
+  }
+
+  .user-list {
+    gap: 12px;
+  }
+}
